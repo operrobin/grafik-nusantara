@@ -1,0 +1,17 @@
+node_modules
+/storage/*.key
+/vendor
+.env
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/resources/views/testing
+yarn-error.log
+/public/js/laravel.app.js 
+/public/js/dashmix.app.js
+/composer.lock
+/.vscode
+
+composer.lock
