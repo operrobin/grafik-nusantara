@@ -1,0 +1,5 @@
+--- 
+deployment:
+ task: 
+ - export DEPLOYPATH=/home/grafisnu/www
+ - /bin/cp -R . $DEPLOYPATH 
