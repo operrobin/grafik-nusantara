@@ -12,10 +12,6 @@
         </svg>
     </button>
 
-    @php
-        echo strpos(Route::currentRouteName(), 'koleksi');
-    @endphp
-
     <div class="nav-menu">
         <ul class="menu-list">
             <li @if(strpos(Route::currentRouteName(), 'koleksi') !== false) class="active" @endif>
