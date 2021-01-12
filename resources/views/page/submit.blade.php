@@ -47,6 +47,10 @@
             outline: none !important;
         }
 
+        .modal-footer button {
+            font-size: 9.5pt;
+        }
+
         .choice {
             font-family: Onehunga, sans-serif;
         }
@@ -155,6 +159,16 @@
                 /* identical to box height */
                 letter-spacing: 0.03em;
             }
+
+            .label-story{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+
+        .label-story textarea {
+            resize: none !important;
         }
 
         #submit-modal-title {
@@ -195,8 +209,8 @@
     @endif
 
     <section class="submit">
-        <p>1. This website is all about presenting the books of others: authors, artists or designers, past and present publications you admire or would like to have done yourself, that challenge or inspire you. ‘A Good Book’ is not another portfolio blog. Please refrain from submitting your own or your colleagues’ works.</p>
-        <p>2. Here’s what you need in order to submit a book:<br><br>• A short description of your book or the aspect that makes it ‘good’. From 140 characters to a maximum of 560, including spaces.<br>• The bibliographic details: author, title, year of publication, publisher, designer (if known). A questionnaire is already set up within the email that opens when you click ‘Submit now’.<br>• One to five photos of your book (at least 1400 pixels wide for landscape format and 1200 pixels high for portrait format).<br><br>I recommend taking the photographs under natural light. I take mine directly on my desktop using an iPhone on a swan-neck clip, with daylight from the right and a styrofoam brightener to the left.<br></p>
+        <p>1. Website ini menyajikan arsip label dan stiker lawas Indonesia yang dibuat di era 90an ke bawah.</p>
+        <p>2. Harap mengirimkan arsip prib</p>
     
         <button data-toggle="modal" data-target="#arsipSend" class="btn btn-arsip">
             Kirimkan Arsip Label
@@ -217,54 +231,56 @@
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="col-12 mb-sm-4">
-                                <div class="choice">
-                                    <h2 id="submit-modal-title">Formulir Pengarsipan</h2>
-                                    <div class="form-check-custom form-check-inline">
-                                        <input class="form-check-input-custom" required type="radio" name="type" id="inlineRadio1" value="Label">
-                                        <label class="form-check-label-custom" for="inlineRadio1">Label</label>
-                                        <span class="checkmark"></span>
+                                <h2 id="submit-modal-title">Formulir Pengarsipan</h2>
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="col-12 col-sm-6 offset-sm-12">
+                                    <div class="form-group">
+                                        <label>Nama</label>
+                                        <input type="text" name="name" class="form-control mt-sm-3" required placeholder="Nama Lengkap"/>
                                     </div>
-                                    <div class="form-check-custom form-check-inline">
-                                        <input class="form-check-input-custom" required type="radio" name="type" id="inlineRadio2" value="Sticker">
-                                        <label class="form-check-label-custom" for="inlineRadio2">Sticker</label>
-                                        <span class="checkmark"></span>
+
+                                    <div class="form-group">
+                                        <label>Nomor Telepon</label>
+                                        <input type="text" name="phone" class="form-control mt-sm-3" required placeholder="08xxxxxxxxx"/>
+                                    </div>
+
+                                    <div class="form-group mt-sm-3">
+                                        <label>Alamat Email</label>
+                                        <input type="text" name="email" class="form-control mt-sm-3" required placeholder="Email@kamu"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Nama Akun Instagram</label>
+                                        <input type="text" name="instagram" class="form-control mt-sm-3" required placeholder="@akunkamu"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 offset-sm-12">
+                                    <div class="choice">
+                                        <div class="form-check-custom form-check-inline">
+                                            <input class="form-check-input-custom" required type="radio" name="type" id="inlineRadio1" value="Label">
+                                            <label class="form-check-label-custom" for="inlineRadio1">Label</label>
+                                            <span class="checkmark"></span>
+                                        </div>
+                                        <div class="form-check-custom form-check-inline">
+                                            <input class="form-check-input-custom" required type="radio" name="type" id="inlineRadio2" value="Sticker">
+                                            <label class="form-check-label-custom" for="inlineRadio2">Sticker</label>
+                                            <span class="checkmark"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group label-story">
+                                        <label>Data Arsip</label>
+                                        <textarea name="story" rows="4" class="form-control mt-sm-3" required placeholder="Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)"></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 offset-sm-12">
-                                <div class="form-group">
-                                    <label>Nama</label>
-                                    <input type="text" name="name" class="form-control" required placeholder="Nama Lengkap"/>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Nama Akun Instagram</label>
-                                    <input type="text" name="instagram" class="form-control" required placeholder="@akunkamu"/>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Nomor Telepon</label>
-                                    <input type="text" name="phone" class="form-control" required placeholder="08xxxxxxxxx"/>
-                                </div>
-
-                                <div class="form-group mt-sm-3">
-                                    <label>Alamat Email</label>
-                                    <input type="text" name="email" class="form-control" required placeholder="Email@kamu"/>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Cerita Tentang Label</label>
-                                    <textarea name="story" rows="4" class="form-control" required placeholder="Cerita mengenai koleksi label/sticker"></textarea>
-                                </div>
-                            </div>
-
+                        <div class="row">
                             <div class="col-12">
-
                                 <div class="form-group mt-sm-5 d-none">
                                     <label>Lampirkan File</label>
                                     <input type="file" multiple name="file[]" accept='image/*' class="image_click" required/>
@@ -274,7 +290,7 @@
 
                         </div>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer d-flex justify-content-center">
                         <button type="button" class="btn btn-secondary btn-send2" onclick="$('.image_click').click()">Lampirkan Foto</button>
                         <button type="submit" class="btn btn-primary btn-send">Kirim Arsip Label</button>
                     </div>
