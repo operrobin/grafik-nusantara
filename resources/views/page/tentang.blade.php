@@ -131,7 +131,7 @@
                     <br />for noncommercial and educational use only. 
                     <br />All rights belong to the authors.
                     <br><br>© 2020 Grafis nusantara. All Rights Reserved.
-                    <br>Indonesia +49 89 2710874<br>info@grafisnusantara.com<br><br>
+                    <br>Indonesia +62 852 5113 5666<br>info@grafisnusantara.com<br><br>
                 </p>
             </div>
 
