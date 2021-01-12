@@ -151,6 +151,12 @@
             .horizontal-journal .jurnal-item {
                 width: 30%;
             }
+
+
+        }
+
+        .jurnal-item .content p{
+                font-size: 14;
         }
     </style>
 
