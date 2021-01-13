@@ -226,7 +226,7 @@
         </p>
     
         <button data-toggle="modal" data-target="#arsipSend" class="btn btn-arsip">
-            Kirimkan Arsip Label
+            Kirimkan Arsip
         </button>
     </section>
 
@@ -305,7 +305,7 @@
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <button type="button" class="btn btn-secondary btn-send2" onclick="$('.image_click').click()">Lampirkan Foto</button>
-                        <button type="submit" class="btn btn-primary btn-send">Kirim Arsip Label</button>
+                        <button type="submit" class="btn btn-primary btn-send">Kirim Arsip</button>
                     </div>
                 </div>
             </div>
