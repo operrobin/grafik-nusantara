@@ -210,7 +210,20 @@
 
     <section class="submit">
         <p>1. Website ini menyajikan arsip label dan stiker lawas Indonesia yang dibuat di era 90an ke bawah.</p>
-        <p>2. Harap mengirimkan arsip prib</p>
+        <p>2. Harap megirimkan arsip pribadi Anda sendiri bukan orang lain.</p>
+
+        <p>
+            3. Data Pengarsip dan Arsip:
+            <li>Data Pengarsip: Nama Kolektor, Nomer Telepon, Alamat Email, Akun Instagram. </li>
+            <li>Data Arsip: Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)</li>
+        </p>
+
+        <p>
+            4. Format Arsip:
+            <li>Arsip di scan atau di foto dan harus terlihat jelas</li>
+            <li>Latar harus berwarna Hitam</li>
+            <li><i>Media Square</i> dengan ukuran 1080 x 1080 pixel</li>
+        </p>
     
         <button data-toggle="modal" data-target="#arsipSend" class="btn btn-arsip">
             Kirimkan Arsip
