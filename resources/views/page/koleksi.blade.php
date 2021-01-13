@@ -9,8 +9,10 @@
     <div class="collection mx-sm-5">
 
         <div class="types">
+            <a href="{{ url('koleksi') }}" class="label-type @empty($selectedType) active @endempty">Semua</a>
+            
             @foreach(\App\Models\CollectionType::all() as $c)
-            <a href="{{ url('koleksi?type=' . $c->id) }}" class="label-type @if($c->id == $selectedType->id) active @endif">{{ $c->name }}</a>
+                <a href="{{ url('koleksi?type=' . $c->id) }}" class="label-type @if($c->id == $selectedType->id) active @endif">{{ $c->name }}</a>
             @endforeach
         </div>
 

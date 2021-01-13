@@ -156,6 +156,10 @@ html {
     font-size: 34pt;
 }
 
+.header .nav-menu .menu-list .active{
+    text-underline-offset: 3px;
+}
+
 #carousel-engine {
     position: absolute;
     top: 50%;
@@ -292,7 +296,7 @@ html {
     display: block;
     white-space: nowrap;
     margin:5px 0;
-    margin-right: 10px;
+    margin-right: 15px !important;
     font-size: 18pt;
     color: white;
     opacity: 0.3;
@@ -302,7 +306,6 @@ html {
     color: white;
     opacity: 1;
 }
-
 
 .collection .categories {
     display: flex;
@@ -483,7 +486,7 @@ html {
 
     .header .title a {
         color: white;
-        font-size: 36pt;
+        font-size: 36px;
         font-style: normal;
         font-weight: normal;
         line-height: 34px;
@@ -518,7 +521,7 @@ html {
     }
 
     .header .nav-menu .menu-list li a {
-        font-size: 24pt;
+        font-size: 24px;
     }
 
     .jurnal-link {
@@ -611,14 +614,26 @@ html {
 }
 
 .menu-letter-spacing{
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
     .active{
         text-decoration: underline;
     }
+
+    /**
+     * Part of "Koleksi" menu. 
+     */
+    .collection .types .active {
+        text-decoration: none;
+    }
+
+    .collection .categories .active{
+        text-decoration: none;
+    }
 }
+
 
 .font-bold{
     font-weight: bold;
