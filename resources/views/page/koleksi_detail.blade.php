@@ -176,6 +176,66 @@
                 margin: 0 auto;
             }
         }
+
+        .terkait .koleksi-item:hover > .title a {
+            width: 100%;
+
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .terkait .banner .overlay{
+            position: absolute;
+            background: black;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .terkait .koleksi-item:hover > .banner .overlay {
+            opacity: 1;
+        }
+
+        .terkait .koleksi-item:hover > .banner .overlay {
+            cursor: pointer;
+        }
+
+        .terkait .koleksi-item .title a{
+            color: white;
+        }
+
+        .terkait .koleksi-item .title {
+            margin-top: 1em;
+            font-family: Lato, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 140%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+
+            text-transform: uppercase;
+            text-underline-offset: 2px;
+
+            /* or 25px */
+            letter-spacing: 0.03em;
+
+            color: #FFFFFF;
+        }
+
+        .terkait .koleksi-item .date {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 14px;
+        }
     </style>
 
 @endsection
@@ -230,14 +290,25 @@
 
             <div class="row">
             @foreach(\App\Models\Collection::all() as $j)
-
                 <div class="col-6 col-sm-3 justify-content-center align-self-center text-center">
                     <div class="koleksi-item">
                         <div class="banner">
                             <a href="{{ route('koleksiDetail', $j->id) }}">
+                                <div class="overlay">
+                                    <div class="title">
+                                        <a href="{{ route('koleksiDetail', $j->id) }}">{{ $j->name }}</a>
+                                        <div class="date">
+                                            {{ date('d F Y', strtotime($j->Category->name)) }}
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="{{ !empty($j->getMedia('gallery')) ? $j->getMedia('gallery')[0]->getUrl():'' }}"/>
                             </a>
                         </div>
+
+                        
+    
+                        
                     </div>
                 </div>
 
