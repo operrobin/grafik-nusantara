@@ -139,6 +139,20 @@
             margin: 0 32px;
         }
 
+        .terkait .jurnal-item .banner .overlay{
+            position: absolute;
+            z-index: 7;
+            background: black;
+            width: 29%;
+            height: 17vw;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .terkait .jurnal-item:hover > .banner .overlay {
+            opacity: 0.5;
+        }
+
         @media only screen and (min-width: 768px) {
             .journal-banner {
                 margin-top: 3em;
@@ -151,8 +165,6 @@
             .horizontal-journal .jurnal-item {
                 width: 30%;
             }
-
-
         }
 
         .jurnal-item .content p{
@@ -204,9 +216,10 @@
         <div class="horizontal-journal mx-md-6">
 
             @foreach(\App\Models\Journal::orderBy('published_at', 'DESC')->get() as $j)
-                <div class="jurnal-item">
+                <div class="jurnal-item mx-sm-3">
                     <div class="banner">
                         <a href="{{ route('jurnalDetail', $j->id) }}">
+                            <div class="overlay"></div>
                             <img src="{{ !empty($j->getMedia('gallery')) ? $j->getMedia('gallery')[0]->getUrl():'' }}"/>
                         </a>
                     </div>
