@@ -162,7 +162,7 @@
 
             .label-story{
                 position: absolute;
-                bottom: 0;
+                top: 100;
                 width: 100%;
             }
         }
@@ -174,6 +174,17 @@
         #submit-modal-title {
             font-family: Onehunga, sans-serif;
             letter-spacing: 0.03em
+        }
+
+        @media (min-width: 576px) {
+            .col-sm-05{
+                position: relative;
+                width: 100%;
+                padding-right: 7.5px !important;
+                padding-left: 7.5px !important;
+                flex: 0 0 4.1666666666% !important;
+                max-width: 4.1666666666% !important;
+            }
         }
 
     </style>
@@ -209,21 +220,49 @@
     @endif
 
     <section class="submit">
-        <p>1. Website ini menyajikan arsip label dan stiker lawas Indonesia yang dibuat di era 90an ke bawah.</p>
-        <p>2. Harap megirimkan arsip pribadi Anda sendiri bukan orang lain.</p>
+        <div class="row no-gutters">
+            <div class="col-2 col-sm-05 col-sm-1">
+                <p>1.</p>
+            </div>
+            <div class="col-10 col-sm-11">
+                <p>Website ini menyajikan arsip label dan stiker lawas Indonesia yang dibuat di era 90an ke bawah.</p>
+            </div>
+        </div>
 
-        <p>
-            3. Data Pengarsip dan Arsip:
-            <li>Data Pengarsip: Nama Kolektor, Nomer Telepon, Alamat Email, Akun Instagram. </li>
-            <li>Data Arsip: Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)</li>
-        </p>
+        <div class="row no-gutters">
+            <div class="col-2 col-sm-05 col-sm-1">
+                <p>2.</p>
+            </div>
+            <div class="col-10 col-sm-11">
+                <p>Harap megirimkan arsip pribadi Anda sendiri bukan orang lain.</p>
+            </div>
+        </div>
 
-        <p>
-            4. Format Arsip:
-            <li>Arsip di scan atau di foto dan harus terlihat jelas</li>
-            <li>Latar harus berwarna Hitam</li>
-            <li><i>Media Square</i> dengan ukuran 1080 x 1080 pixel</li>
-        </p>
+        <div class="row no-gutters">
+            <div class="col-2 col-sm-05 col-sm-1">
+                <p>3.</p>
+            </div>
+            <div class="col-10 col-sm-11">
+                <p> Data Pengarsip dan Arsip:
+                    <li>Data Pengarsip: Nama Kolektor, Nomer Telepon, Alamat Email, Akun Instagram. </li>
+                    <li>Data Arsip: Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)</li>
+                </p>
+            </div>
+        </div>
+
+        <div class="row no-gutters mt-2">
+            <div class="col-2 col-sm-05 col-sm-1">
+                <p>4.</p>
+            </div>
+            <div class="col-10 col-sm-11">
+                <p>
+                    Format Arsip:
+                    <li>Arsip di scan atau di foto dan harus terlihat jelas</li>
+                    <li>Latar harus berwarna Hitam</li>
+                    <li><i>Media Square</i> dengan ukuran 1080 x 1080 pixel</li>
+                </p>
+            </div>
+        </div>
     
         <button data-toggle="modal" data-target="#arsipSend" class="btn btn-arsip">
             Kirimkan Arsip
@@ -303,7 +342,7 @@
 
                         </div>
                     </div>
-                    <div class="modal-footer d-flex justify-content-center">
+                    <div class="modal-footer d-flex justify-content-center float-right">
                         <button type="button" class="btn btn-secondary btn-send2" onclick="$('.image_click').click()">Lampirkan Foto</button>
                         <button type="submit" class="btn btn-primary btn-send">Kirim Arsip</button>
                     </div>

@@ -292,7 +292,7 @@
             @foreach(\App\Models\Collection::all() as $j)
                 <div class="col-6 col-sm-3 justify-content-center align-self-center text-center">
                     <div class="koleksi-item">
-                        <div class="banner">
+                        <div class="banner image-hover-state">
                             <a href="{{ route('koleksiDetail', $j->id) }}">
                                 <div class="overlay">
                                     <div class="title">
