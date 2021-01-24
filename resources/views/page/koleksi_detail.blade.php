@@ -233,7 +233,7 @@
 
                 <div class="col-6 col-sm-3 justify-content-center align-self-center text-center">
                     <div class="koleksi-item">
-                        <div class="banner">
+                        <div class="banner image-hover-state">
                             <a href="{{ route('koleksiDetail', $j->id) }}">
                                 <img src="{{ !empty($j->getMedia('gallery')) ? $j->getMedia('gallery')[0]->getUrl():'' }}"/>
                             </a>
