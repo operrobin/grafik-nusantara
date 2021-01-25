@@ -208,7 +208,7 @@ html {
 
 
 .section-one {
-    margin: 19em 32px;
+    margin: 13em 32px;
     height: 60%;
     position: relative;
 }
@@ -637,4 +637,12 @@ html {
 
 .font-bold{
     font-weight: bold;
+}
+
+/**
+ * Hover State 
+ */
+
+.image-hover-state:hover{
+    box-shadow: inset 99999px 99999px 99999px rgb(0, 0, 255);
 }
