@@ -187,6 +187,8 @@
             }
         }
 
+
+
     </style>
 
 @endsection
@@ -244,8 +246,10 @@
             </div>
             <div class="col-10 col-sm-11">
                 <p> Data Pengarsip dan Arsip:
-                    <li>Data Pengarsip: Nama Kolektor, Nomer Telepon, Alamat Email, Akun Instagram. </li>
-                    <li>Data Arsip: Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)</li>
+                    <ul>
+                        <li>Data Pengarsip: Nama Kolektor, Nomer Telepon, Alamat Email, Akun Instagram. </li>
+                        <li>Data Arsip: Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)</li>
+                    </ul>
                 </p>
             </div>
         </div>
@@ -257,9 +261,12 @@
             <div class="col-10 col-sm-11">
                 <p>
                     Format Arsip:
-                    <li>Arsip di scan atau di foto dan harus terlihat jelas</li>
-                    <li>Latar harus berwarna Hitam</li>
-                    <li><i>Media Square</i> dengan ukuran 1080 x 1080 pixel</li>
+                    <ul style="column-count: 1;">
+                        <li>Arsip di scan atau di foto dan harus terlihat jelas</li>
+                        <li>Latar harus berwarna Hitam</li>
+                        <li><i>Media Square</i> dengan ukuran 1080 x 1080 pixel</li>
+                    </ul>
+
                 </p>
             </div>
         </div>
@@ -326,7 +333,7 @@
 
                                     <div class="form-group label-story">
                                         <label>Data Arsip</label>
-                                        <textarea name="story" rows="4" class="form-control mt-sm-3" required placeholder="Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)"></textarea>
+                                        <textarea name="story" rows="9" style="height: 14.97em;" class="form-control mt-sm-3" required placeholder="Judul / Kategori (Ex: Label-Obat, Stiker-Religi) / Tahun Pembuatan (Jika diketahui) / Desainer (Jika diketahui)"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -342,7 +349,7 @@
 
                         </div>
                     </div>
-                    <div class="modal-footer d-flex justify-content-center float-right">
+                    <div class="modal-footer float-right">
                         <button type="button" class="btn btn-secondary btn-send2" onclick="$('.image_click').click()">Lampirkan Foto</button>
                         <button type="submit" class="btn btn-primary btn-send">Kirim Arsip</button>
                     </div>
@@ -351,4 +358,27 @@
         </form>
     </div>
 
+    <script>
+        let checkmarks = document.getElementsByClassName('checkmark');
+        checkmarks[0].addEventListener('click', () => {
+            document.getElementById('inlineRadio1').dispatchEvent(
+                new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window,
+                })
+            );
+        });
+
+        checkmarks[1].addEventListener('click', () => {
+            document.getElementById('inlineRadio2').dispatchEvent(
+                new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window,
+                })
+            );
+        });
+
+    </script>
 @endsection
