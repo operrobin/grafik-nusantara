@@ -3,7 +3,7 @@ $(function() {
     let menu = $(".header");
     let html = $("body");
 
-    $('#header-toggle').click(function(e) {
+    $('#header-toggle').on('click', function(e) {
 
         if (menu.hasClass('open')) {
             menu.removeClass('open');
