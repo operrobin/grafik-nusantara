@@ -151,6 +151,19 @@ html {
     transform: translateY(-50%);
 }
 
+@media screen and (max-height: 400px){
+    .menu-letter-spacing {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+        margin-top: -3rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
 .header .nav-menu .menu-list li a {
     color: white;
     font-size: 34pt;
@@ -449,8 +462,6 @@ html {
 .modal .modal-footer {
     border-top: none;
 }
-
-
 
 
 /*
