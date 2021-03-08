@@ -1,9 +1,21 @@
 @extends('layouts.app')
 @section('content')
     <style>
-        .footer{
-            margin-top: 5rem;
+
+        @media screen and (max-width: 991.98px){
+            .footer{
+                margin-top: 36rem;
+
+            }
         }
+
+        @media screen and (max-width: 768px){
+            .footer{
+                margin-top: 5rem !important;
+                margin-bottom: 2.5rem !important;
+            }
+        }
+
     </style>
     
     <section class="section-one">
